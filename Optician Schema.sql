@@ -36,6 +36,7 @@ CREATE TABLE customers	(
 	email VARCHAR(50) NOT NULL,
 	register_date DATE NOT NULL,
 	referred_by INT NOT NULL,
+    FOREIGN KEY (referred_by) REFERENCES customers(customer_id),
 	FOREIGN KEY (address_id) REFERENCES addresses(address_id)
 );
 
